@@ -62,7 +62,7 @@ def main(raw_args=None):
 		samfile = pysam.AlignmentFile(INPUT_ALN, "r")
 	elif INPUT_ALN[-4:].lower() == '.bam':
 		samfile = pysam.AlignmentFile(INPUT_ALN, "rb")
-	elif INPUT_ALN[-4:].lower() == '.cram':
+	elif INPUT_ALN[-5:].lower() == '.cram':
 		samfile = pysam.AlignmentFile(INPUT_ALN, "rc")
 	else:
 		print('Error: unknown -i file type')
