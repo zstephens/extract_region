@@ -82,7 +82,9 @@ def main(raw_args=None):
 			# rname, chr, pos, cigar, seq, qual, orientation
 			read_list.append([splt[0], MY_CHR, int(splt[3]), splt[5], splt[9], splt[10], orientation])	
 	except ValueError:
-		print('skipping contig that was not present in input BAM:', bed_str[i][0])
+		print('Error:', MY_CHR, 'was not found in input BAM')
+		samfile.close()
+		exit(1)
 	samfile.close()
 	#
 	seq_lens  = []

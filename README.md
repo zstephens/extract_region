@@ -1,5 +1,5 @@
 # extract_region
-a quick script for extracting portions of reads that span specified reference coordinates
+a quick script for extracting portions of long reads that span specified reference coordinates
 
 ## example
 here's an example usage for extracting repeat expansions in C9orf72:
